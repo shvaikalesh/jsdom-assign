@@ -29,3 +29,19 @@ for (var key in window) if (!(key in global))
     try { global[key] = window[key] }
     finally {}
 }
+
+var _close = window.close
+
+window.close = function()
+{
+    Object.keys(global).forEach(function(key)
+    {
+        if (global[key] == window[key])
+        {
+            try { delete global[key] }
+            finally {}
+        }
+    })
+
+    _close.apply(this, arguments)
+}
