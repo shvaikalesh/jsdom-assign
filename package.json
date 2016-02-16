@@ -1,0 +1,14 @@
+{
+    "name": "jsdom-assign",
+    "version": "1.0.0",
+
+    "main": "jsdom-assign.js",
+    "peerDependencies": { "jsdom": ">= 3.0.0" },
+
+    "description": "Assign jsdom APIs to global on require",
+    "author": "Aleksey Shvayka <aleshashvaika@hotmail.com>",
+    "keywords": [ "assign", "jsdom", "global" ],
+
+    "repository": "shvaikalesh/jsdom-assign",
+    "license": "MIT"
+}
